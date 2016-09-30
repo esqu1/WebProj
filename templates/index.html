@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<head>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+</head>
+<body>
+<header>
+      <nav class="light-blue lighten-1" role="navigation">
+	<div class="nav-wrapper container">
+	  <a href="/" class="brand-logo">Building Search</a>
+	  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+	</div>
+      </nav>
+    </header> <!-- Some header code I took from my personal site. -->
+<div class="container">
+	{% if name %}
+		<h1>Search Results</h1>
+
+	{% endif %}
