@@ -21,12 +21,23 @@ def generateResults():
 			d['description'] = el['description']
 			d['link'] = el['http_link']
 			d['image'] = el["campus_item_images"][0]["image_url"]
+			d['latitude'] = float(el['latitude'])
+			d['longitude'] = float(el['longitude'])
+			d['id'] = int(el['id'])
+			d['fbshare'] = linksafe(d['link'])
+			d['architect'] = el['architect']
+			d['year'] = el['year_built']
 			body.append(d)
 		return body
   
 def req(name):
     r = requests.get("https://api.pennlabs.org/buildings/search?q=%s" % name)
     return r.json()
+
+def linksafe(l):
+	l.replace("/","%2F")
+	l.replace(":","%3A")
+	return l
 
 if __name__ == "__main__":
     app.run()
