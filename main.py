@@ -15,13 +15,13 @@ def generateResults():
 			body = None
 			pass
 		for el in req(name)["result_data"]:
-			title = el["title"]
-			address = el["address"]
-			description = el["description"]
-			link = el["http_link"]
-			body.append(title)
-
-		print body
+			d = {}
+			d['title'] = el['title']
+			d['address'] = el['address']
+			d['description'] = el['description']
+			d['link'] = el['http_link']
+			d['image'] = el["campus_item_images"][0]["image_url"]
+			body.append(d)
 		return body
   
 def req(name):
