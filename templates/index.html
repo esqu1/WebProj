@@ -45,7 +45,7 @@
 							{% if result.architect %}<p><b>Architect</b>: {{ result.architect }}</p>{% endif %}
 							{% if result.year %}<p><b>Year Built</b>: {{ result.year }}</p>{% endif %}
 							{% if result.link %} <p><b>Website</b>: <a href="{{result.link}}">{{ result.link }}</a>
-							<center><div class="fb-share-button" data-href="http://www.facilities.upenn.edu/maps/bike-racks/harnwell" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{result.fbshare}}&amp;src=sdkpreparse">Share</a></div></center></p>  {% endif %}
+							<center><div class="fb-share-button" data-href="{{result.link}}" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{result.fbshare}}&amp;src=sdkpreparse">Share</a></div></center></p>  {% endif %}
 
 							<center><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB1bvakbkJVZVooyd2vzlES9VS9a-JG0Nk&q=({{result.latitude}},{{result.longitude}})" allowfullscreen>
 							</iframe></center><br>
